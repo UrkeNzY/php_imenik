@@ -8,6 +8,31 @@
     <title>Document</title>
 </head>
 <body>
+<?php
 
+use classes\Phonebook;
+
+require 'classes/Phonebook.php';
+
+    $phonebook = new Phonebook();
+    $kontakti = $phonebook->ucitaj_kontakte();
+?>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Ime i prezime</td>
+            <td>Email</td>
+            <td>Broj telefona</td>
+        </tr>
+        <?php foreach ($kontakti as $k) {
+            echo "<tr>
+                    <td>{$k['id']}</td>
+                    <td>{$k['name']}</td>
+                    <td>{$k['email']}</td>
+                    <td>{$k['telefon']}</td>
+                </tr>";
+        } ?>
+
+    </table>
 </body>
 </html>

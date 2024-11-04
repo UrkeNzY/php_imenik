@@ -11,12 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(empty($ime) || empty($email) || empty($broj_telefona)){
         echo "Sva polja su obavezna!";
-
     } else {
+        $phonebook->dodaj_kontakt($ime, $email, $broj_telefona);
         echo "Kontakt uspjesno dodat!";
     }
-
-    $phonebook->dodaj_kontakt($ime, $email, $broj_telefona);
 }
 
 require 'views/dodaj.view.php';
