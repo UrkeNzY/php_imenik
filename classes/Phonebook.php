@@ -50,25 +50,25 @@ class Phonebook
     public function izmijeni_kontakt($id, $ime, $email, $telefon) {
         $kontakti = $this->ucitaj_kontakte();
 
-        foreach ($kontakti as $kontakt) {
-            if($kontakt['id'] == $id) {
-                if($ime != null) {
-                    $kontakt['ime'] = $ime;
+        foreach ($kontakti as &$kontakt) {
+            if ($kontakt['id'] == $id) {
+                if ($ime != null) {
+                    $kontakt['name'] = $ime;
                 }
 
-                if($email != null) {
+                if ($email != null) {
                     $kontakt['email'] = $email;
                 }
 
-                if($telefon != null) {
+                if ($telefon != null) {
                     $kontakt['telefon'] = $telefon;
                 }
 
                 break;
             }
-
-            $this->sacuvaj_kontakte($kontakti);
         }
+
+        $this->sacuvaj_kontakte($kontakti);
     }
 
     public function izbrisi_kontakt($id) {

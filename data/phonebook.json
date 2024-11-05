@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Uros Radunovic",
+        "name": "a",
         "email": "programerurke@gmail.com",
         "telefon": "067449568"
     },
@@ -10,5 +10,23 @@
         "name": "Ksenija Radunovic",
         "email": "ksenijaradunovic@gmail.com",
         "telefon": "067345128"
+    },
+    {
+        "id": 3,
+        "name": "Uros Urosevic",
+        "email": "programerurke@gmail.com",
+        "telefon": "067449568"
+    },
+    {
+        "id": 4,
+        "name": "Uros Radunovic",
+        "email": "programerurke@gmail.com",
+        "telefon": "067449568"
+    },
+    {
+        "id": 5,
+        "name": "Marko Markovic",
+        "email": "mmarkovic@gmail.com",
+        "telefon": "05643245"
     }
 ]

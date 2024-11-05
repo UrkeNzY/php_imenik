@@ -8,20 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-    use Classes\Phonebook;
-
-    require 'classes/Phonebook.php';
-
-    $phonebook = new Phonebook();
-
-    if(isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $kontakt = $phonebook->ucitaj_kontakt($id);
-    }
-?>
     <h1>Izmijeni kontakt</h1>
-    <form method="POST" action="../dodaj.php">
+    <form method="POST" action="izmijeni.php?id=<?= $kontakt['id'] ?>">
         <label for="ime_i_prezime">Ime i prezime:</label>
         <input id="ime_i_prezime" name="ime_i_prezime" type="text" value="<?= $kontakt['name'] ?>"} />
         <br/>

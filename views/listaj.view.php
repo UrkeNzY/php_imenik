@@ -8,15 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-
-use classes\Phonebook;
-
-require 'classes/Phonebook.php';
-
-    $phonebook = new Phonebook();
-    $kontakti = $phonebook->ucitaj_kontakte();
-?>
     <table border="1">
         <tr>
             <td>ID</td>
