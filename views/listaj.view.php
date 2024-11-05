@@ -14,14 +14,17 @@
             <td>Ime i prezime</td>
             <td>Email</td>
             <td>Broj telefona</td>
+            <td></td>
         </tr>
         <?php foreach ($kontakti as $k) {
         $link = "izmijeni.php?id=" . $k['id'];
+        $link2 = "izbrisi.php?id=" . $k['id'];
             echo "<tr>
                     <td><a href={$link}>{$k['id']}</a></td>
                     <td>{$k['name']}</td>
                     <td>{$k['email']}</td>
                     <td>{$k['telefon']}</td>
+                    <td><a href={$link2}>Obrisi</a></td>
                 </tr>";
         } ?>
 

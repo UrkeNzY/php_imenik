@@ -21,5 +21,6 @@
         <br/>
         <button type="submit">Izmijeni</button>
     </form>
+    <a href="listaj.php">Idi na listu kontakata</a>
 </body>
 </html>

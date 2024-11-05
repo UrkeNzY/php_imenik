@@ -73,7 +73,7 @@ class Phonebook
 
     public function izbrisi_kontakt($id) {
         $kontakti = $this->ucitaj_kontakte();
-        $fkontakti = array_filter($kontakti, fn($kontakt) => $kontakt['id'] == $id);
+        $fkontakti = array_filter($kontakti, fn($kontakt) => $kontakt['id'] != $id);
         $this->sacuvaj_kontakte($fkontakti);
     }
 }
