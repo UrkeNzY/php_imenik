@@ -17,7 +17,7 @@ require 'classes/Phonebook.php';
     $phonebook = new Phonebook();
     $kontakti = $phonebook->ucitaj_kontakte();
 ?>
-    <table>
+    <table border="1">
         <tr>
             <td>ID</td>
             <td>Ime i prezime</td>
@@ -25,8 +25,9 @@ require 'classes/Phonebook.php';
             <td>Broj telefona</td>
         </tr>
         <?php foreach ($kontakti as $k) {
+        $link = "izmijeni.php?id=" . $k['id'];
             echo "<tr>
-                    <td>{$k['id']}</td>
+                    <td><a href={$link}>{$k['id']}</a></td>
                     <td>{$k['name']}</td>
                     <td>{$k['email']}</td>
                     <td>{$k['telefon']}</td>

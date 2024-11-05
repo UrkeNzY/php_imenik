@@ -19,6 +19,17 @@ class Phonebook
         return []; //ako fajl ne postoji
     }
 
+    public function ucitaj_kontakt($id) {
+        $kontakti = $this->ucitaj_kontakte();
+        foreach($kontakti as $kontakt) {
+            if($kontakt['id'] == $id) {
+                return $kontakt;
+            }
+        }
+
+        return null;
+    }
+
     public function sacuvaj_kontakte($kontakti) { //argument enkodira u json format i upisuje u phonebook.json
         file_put_contents($this->filename, json_encode($kontakti, JSON_PRETTY_PRINT));
     }
