@@ -13,9 +13,13 @@ if(isset($_GET['id'])) { #uzimamo id iz url predat kao parametar
         $ime = $_POST['ime_i_prezime'];
         $email = $_POST['email'];
         $telefon = $_POST['broj_telefona'];
-        $phonebook->izmijeni_kontakt($id, $ime, $email, $telefon);
 
-        echo "Kontakt je azuriran!";
+        if(empty($ime) || empty($email) || empty($telefon)) {
+            echo "Sva polja su obavezna!";
+        } else {
+            $phonebook->izmijeni_kontakt($id, $ime, $email, $telefon);
+            echo "Kontakt je azuriran!";
+        }
     }
 } else {
     echo "Greska pri azuriranju!";
